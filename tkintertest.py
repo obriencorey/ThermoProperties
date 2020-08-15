@@ -1,7 +1,17 @@
 from tkinter import *
 import tkinter.font as tkFont
 
+
 lightBlue = '#EDF7F6'       #hex code for light blue color
+
+Types = [
+    ("Water", 1),
+    ("Ammonia", 2),
+    ("R134-A", 3)
+]
+
+v = IntVar()
+v.set(1)
 
 window = Tk()
 
@@ -17,7 +27,15 @@ lbl1.config(anchor=CENTER)
 lbl1.pack()
 
 btn1 = Button(window, text="This is Button widget", fg='blue')
-btn1.config(x=80, y=100)
+btn1.place(relx=0.5, rely=0.5, anchor=CENTER)
+
+for val, language in enumerate(languages):
+    tk.Radiobutton(root, 
+                  text=Types,
+                  padx = 20, 
+                  variable=v, 
+                  command=ShowChoice,
+                  value=val).pack(anchor=tk.W)
 
 
 
