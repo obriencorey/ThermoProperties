@@ -4,20 +4,12 @@ import tkinter.font as tkFont
 
 lightBlue = '#EDF7F6'       #hex code for light blue color
 
-Types = [
-    ("Water", 1),
-    ("Ammonia", 2),
-    ("R134-A", 3)
-]
-
-v = IntVar()
-v.set(1)
 
 window = Tk()
 
 window.title("Thermodynamic Property Calculator")
 
-photo = PhotoImage(file = "ThermoProperties/FaviconRocket2.png")
+photo = PhotoImage(file = "ThermoProperties\images\FaviconRocket2.png")
 window.iconphoto(False, photo)
 window.geometry('800x500')
 
@@ -28,14 +20,6 @@ lbl1.pack()
 
 btn1 = Button(window, text="This is Button widget", fg='blue')
 btn1.place(relx=0.5, rely=0.5, anchor=CENTER)
-
-for val, language in enumerate(languages):
-    tk.Radiobutton(root, 
-                  text=Types,
-                  padx = 20, 
-                  variable=v, 
-                  command=ShowChoice,
-                  value=val).pack(anchor=tk.W)
 
 
 
