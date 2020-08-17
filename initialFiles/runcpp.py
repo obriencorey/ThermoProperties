@@ -4,6 +4,10 @@ print("Enter your number: ")
 number = input()
 print(" ")
 
-string = "./printhello.exe " + number + " hello"
+print("Enter your word: ")
+word = input()
+print(" ")
+
+string = "./printhello.exe " + number + " " + word
 
 subprocess.Popen(string)
