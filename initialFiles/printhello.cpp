@@ -7,6 +7,7 @@ using namespace std;
 int main(int argc, char** argv) 
 {  
     
+    /*
     ofstream myfile;
     myfile.open ("example.txt");
 
@@ -18,4 +19,14 @@ int main(int argc, char** argv)
     cout << "File written successfully\n";
     
     return 0; 
+    */
+   ofstream myfile ("hello.txt");
+    if (myfile.is_open())
+    {
+        myfile << "This is a line.\n";
+        myfile << "This is another line.\n";
+        myfile.close();
+    }
+    else cout << "Unable to open file";
+    return 0;
 }
